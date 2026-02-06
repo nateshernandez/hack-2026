@@ -60,7 +60,7 @@ const handler = createMcpHandler(
   },
   {
     serverInfo: {
-      name: "bigtime-analytics",
+      name: "BigTime Software MCP",
       version: "0.1.0",
     },
   },

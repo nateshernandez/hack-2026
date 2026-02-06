@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "populate-embeddings": "tsx scripts/populate-embeddings.ts"
   },
   "dependencies": {
     "@databricks/sql": "^1.12.0",
