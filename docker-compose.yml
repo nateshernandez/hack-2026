@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    container_name: hack-2026-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: hack-2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    configs:
+      - source: init_sql
+        target: /docker-entrypoint-initdb.d/init.sql
+
+configs:
+  init_sql:
+    content: |
+      CREATE EXTENSION IF NOT EXISTS vector;
+
+volumes:
+  pgdata:
