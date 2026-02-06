@@ -1,7 +1,6 @@
 import { DBSQLClient } from "@databricks/sql";
 import type IDBSQLLogger from "@databricks/sql/dist/contracts/IDBSQLLogger";
 import { LogLevel } from "@databricks/sql/dist/contracts/IDBSQLLogger";
-import "server-only";
 
 declare global {
   var databricksClient: DBSQLClient | undefined;
